@@ -1,0 +1,7 @@
+cc = gcc
+rule compile
+   command = $cc -o $out $in
+
+build hello_world: compile main.c
+
+
