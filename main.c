@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-extern int hoge(int a);
+extern int add(int a, int b);
 
 int main(void) {
-  printf("hello!\n");
+    int result = add(1,2);
+    printf("result:%d\n", result);
+    return 0;
 }
 

@@ -1,7 +1,11 @@
 cc = gcc
 rule compile
-   command = $cc -o $out $in
+  command = $cc -c $in -o $out
 
-build hello_world: compile main.c
+rule link
+  command = gcc $in -o $out
 
+build main.o: compile main.c
+build func.o: compile calc.c
+build calc: link main.o func.o
 
